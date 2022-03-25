@@ -18,9 +18,14 @@ export const FoodCard = (foodObj) => {
                 <h5 class="card-title">${foodObj.name}</h5>
                 <p class="card-text">${foodObj.description}</p>
                 <p>Price: $${foodObj.price}</p>
+
+                <img src="${foodObj.isVegetarian ? "./assets/images/icon-veg.png" : ''}">
+               
+
                 <button id="order--${foodObj.id}" type="button" class="btn btn-primary">Add to order</button>
                 <label>Quantity: </label>
                 <input id="quantity--${foodObj.id}" min="0" type="number"></input>
+
             </div>
         </div>
     </div>
