@@ -2,10 +2,10 @@ const apiURL = "http://localhost:8088";
 
 export const getFoods = (id) => {
     if (id===0){
-    return fetch(`${apiURL}/foods`)
+    return fetch(`${apiURL}/foods?_sort=price&_order=asc`)
     .then(response => response.json())}
     else {
-        return fetch(`${apiURL}/foods?menuId=${id}`)
+        return fetch(`${apiURL}/foods?menuId=${id}&_sort=price&_order=asc`)
             .then(response=>response.json())
     }
 }
