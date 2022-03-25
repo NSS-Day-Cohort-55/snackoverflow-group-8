@@ -73,6 +73,7 @@ export const NavBar = () => {
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-end">
+                    <li class="nav-item">${getLoggedInUser().name? `Welcome, ${getLoggedInUser().name}!` : `Welcome!`}</li>
                     <li class="nav-item">
                         <select class="nav-link" aria-current="page" id="menu">
                         <option>Select</option>
