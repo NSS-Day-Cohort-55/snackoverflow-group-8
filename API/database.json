@@ -118,8 +118,47 @@
       "imageURL": "gitngrits.webp"
     }
   ],
-  "orders": [],
-  "orderFoods": [],
+  "orders": [
+    {
+      "userId": 1,
+      "notes": "wow my order",
+      "timestamp": "2022-03-25T20:40:34.187Z",
+      "isPickedUp": false,
+      "id": 1
+    }
+  ],
+  "orderFoods": [
+    {
+      "foodId": 3,
+      "orderId": 1,
+      "id": 1
+    },
+    {
+      "foodId": 3,
+      "orderId": 1,
+      "id": 2
+    },
+    {
+      "foodId": 3,
+      "orderId": 1,
+      "id": 3
+    },
+    {
+      "foodId": 3,
+      "orderId": 1,
+      "id": 4
+    },
+    {
+      "foodId": 3,
+      "orderId": 1,
+      "id": 5
+    },
+    {
+      "foodId": 3,
+      "orderId": 1,
+      "id": 6
+    }
+  ],
   "menus": [
     {
       "id": 1,

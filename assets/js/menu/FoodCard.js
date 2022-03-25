@@ -1,3 +1,5 @@
+export let bigOrderList = [];
+
 export const FoodCard = (foodObj) => {
   const mainElement = document.querySelector(`main`);
 
@@ -5,6 +7,10 @@ export const FoodCard = (foodObj) => {
     if (event.target.id === `order--${foodObj.id}`) {
       const quantityHTML = document.querySelector(`#quantity--${foodObj.id}`);
       const chosenQuantity = parseInt(quantityHTML.value);
+      for (let i = 0; i < chosenQuantity; i++) {
+        bigOrderList.push({ foodId: foodObj.id });
+      }
+      document.dispatchEvent(new CustomEvent("orderUpdated"));
     }
   });
 
@@ -12,19 +18,27 @@ export const FoodCard = (foodObj) => {
     <div class="col-sm-6 g-4">
         <div class="card">
         <div class="h-100">
-        <img src="./assets/images/${foodObj.imageURL}" class="card-img-top" alt="${foodObj.imageURL}">
+        <img src="./assets/images/${
+          foodObj.imageURL
+        }" class="card-img-top" alt="${foodObj.imageURL}">
         </div>
             <div class="card-body" id="food--${foodObj.id}">
                 <h5 class="card-title">${foodObj.name}</h5>
                 <p class="card-text">${foodObj.description}</p>
                 <p>Price: $${foodObj.price}
 
-                <img src="${foodObj.isVegetarian ? "./assets/images/icon-veg.png" : ''}"></p>
+                <img src="${
+                  foodObj.isVegetarian ? "./assets/images/icon-veg.png" : ""
+                }"></p>
                
 
-                <button id="order--${foodObj.id}" type="button" class="btn btn-primary">Add to order</button>
+                <button id="order--${
+                  foodObj.id
+                }" type="button" class="btn btn-primary">Add to order</button>
                 <label>Quantity: </label>
-                <input id="quantity--${foodObj.id}" min="0" type="number"></input>
+                <input id="quantity--${
+                  foodObj.id
+                }" min="0" type="number"></input>
 
             </div>
         </div>
