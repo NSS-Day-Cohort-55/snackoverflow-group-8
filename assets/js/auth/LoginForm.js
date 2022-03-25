@@ -13,7 +13,7 @@ export const LoginForm = () => {
       }
       UserManager.loginUser(userObject).then(() => {
         NavBar();
-        FoodList()
+        FoodList(0)
       })
      
     }

@@ -144,6 +144,18 @@
       "name": "Bryan",
       "email": "bryan@so.com",
       "isAdmin": true
+    },
+    {
+      "name": "Karla",
+      "email": "karl@whut.com",
+      "id": 2,
+      "isAdmin": false
+    },
+    {
+      "name": "bob",
+      "email": "bob@whut.com",
+      "isAdmin": false,
+      "id": 3
     }
   ]
 }

@@ -32,6 +32,25 @@ export const loginUser = (userObj) => {
     });
 };
 
+export const registerUser = (regObj)=>{
+return fetch(
+  `http://localhost:8088/users`, {
+    method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(regObj),
+}
+)
+  .then((response) => response.json())
+  .then((parsedUser) => {
+    //is there a user?
+    
+      setLoggedInUserSessionStorage(parsedUser);
+      return getLoggedInUser(); 
+  });
+};
+
 export const setLoggedInUserSessionStorage = (userObj) => {
   sessionStorage.setItem("SOuser", JSON.stringify(userObj));
   loggedInUser = userObj;
