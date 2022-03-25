@@ -5,7 +5,6 @@ export const FoodCard = (foodObj) => {
     if (event.target.id === `order--${foodObj.id}`) {
       const quantityHTML = document.querySelector(`#quantity--${foodObj.id}`);
       const chosenQuantity = parseInt(quantityHTML.value);
-      console.log(chosenQuantity);
     }
   });
 
