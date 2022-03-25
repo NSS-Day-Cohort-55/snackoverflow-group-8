@@ -6,9 +6,9 @@ export const CheckForUser = () => {
     if (sessionStorage.getItem("SOuser")) {
         UserManager.setLoggedInUserAppState(JSON.parse(sessionStorage.getItem("SOuser")));
         NavBar();
-        FoodList();
+        FoodList(0);
     } else {
         NavBar();
-        FoodList();
+        FoodList(0);
     }
 }
