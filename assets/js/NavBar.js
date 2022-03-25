@@ -10,8 +10,24 @@ export const NavBar = () => {
     headerElement.addEventListener("click", event => {
         if (event.target.id === "login") {
             showLoginRegister()
-        }else if (event.target.id === "menu"){
-            FoodList();
+        }
+    })
+
+    headerElement.addEventListener("change", event=>{
+        if (event.target.value==="0"){
+            FoodList(0)
+        }
+        else if (event.target.value==="1"){
+            FoodList(1)
+        }
+        else if (event.target.value==="2"){
+            FoodList(2)
+        }
+        else if (event.target.value==="3"){
+            FoodList(3)
+        }
+        else if (event.target.value==="4"){ 
+            FoodList(4)
         }
     })
 
@@ -58,7 +74,16 @@ export const NavBar = () => {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-end">
                     <li class="nav-item">
-                        <p class="nav-link" aria-current="page" id="menu">Menu</p>
+                        <select class="nav-link" aria-current="page" id="menu">
+                        <option>Select</option>
+                        <option value="0" id="0">Full Menu</option>
+                        <option value="1" id="1">Lunch</option>
+                        <option value="2" id="2">Drinks</option>
+                        <option value="3" id="3">Appetizers</option>
+                        <option value="4" id="4">Dessert</option>
+                        </select>
+                        
+                        
                     </li>
                     <!-- Only show my order once you login -->
                     <!-- <li class="nav-item">

@@ -8,6 +8,8 @@ import * as UserManager from './auth/UserManager.js';
 import { CheckForUser } from "./auth/CheckForUser.js";
 import { Footer } from "./Footer.js";
 
+
+
 ////////////// app declarations ///////////////////////
 // const headerElement = document.querySelector("header");
 const contentElement = document.querySelector("main");
